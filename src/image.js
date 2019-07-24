@@ -11,7 +11,12 @@ export const insertImage = ({
   const contentStateWithEntity = contentState.createEntity(
     "IMAGE",
     "IMMUTABLE",
-    { src, altText, height, width }
+    {
+      src,
+      altText,
+      height,
+      width
+    }
   );
 
   const entityKey = contentStateWithEntity.getLastCreatedEntityKey();

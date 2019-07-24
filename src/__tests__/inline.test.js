@@ -11,7 +11,7 @@ import {
   removeInlineStyle,
   toggleInlineStyle
 } from "../inlineStyles";
-import { setStyles } from '../styles';
+import { setStyles } from "../styles";
 
 const contentBlocks = convertFromHTML("<div>test</div>");
 const contentState = ContentState.createFromBlockArray(contentBlocks);
@@ -22,22 +22,21 @@ const blockInlineStyleRanges = (editorState, i = 0) => {
     .inlineStyleRanges;
 };
 
-
 setStyles({
-  textColor : {
+  textColor: {
     "COLOR-RED": {
       color: "red"
     },
     "COLOR-GREEN": {
       color: "green"
-    },
+    }
   },
-  fontSizes : {
+  fontSizes: {
     "FONTSIZE-12": {
       fontSize: "12px"
     }
   }
-})
+});
 
 describe("inlineStyles - addInlineStyle", () => {
   describe("Non-collapsed section", () => {

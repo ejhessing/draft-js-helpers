@@ -1,9 +1,7 @@
 import { EditorState, Modifier, RichUtils } from "draft-js";
-import { getStyles } from './styles';
+import { getStyles } from "./styles";
 
 import { forceSelection } from "./selected";
-
-
 
 export const addInlineStyle = ({ editorState, value, type }) => {
   const nextEditorState = removeInlineStyle({ editorState, type });
